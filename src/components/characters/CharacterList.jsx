@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCharacters } from '../../hooks/characters';
 import CharacterItem from './CharacterItem';
+import styles from './CharacterList.css';
 
 const CharacterList = () => {
   const { loading, characters } = useCharacters();
@@ -13,7 +14,7 @@ const CharacterList = () => {
   ));
 
   return (
-    <ul data-testid="characters">
+    <ul data-testid="characters" className={styles.list}>
       {charcacterElements}
     </ul>
   );

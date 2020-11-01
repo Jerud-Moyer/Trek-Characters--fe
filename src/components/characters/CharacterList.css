@@ -1,0 +1,8 @@
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: 	#f2c300;
+  list-style-type: none;
+  text-align: center;
+}

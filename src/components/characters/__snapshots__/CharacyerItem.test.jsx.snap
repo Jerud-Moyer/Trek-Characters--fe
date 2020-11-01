@@ -2,9 +2,12 @@
 
 exports[`CharacterItem component renders Character 1`] = `
 <DocumentFragment>
-  <figure>
+  <figure
+    class="element"
+  >
     <img
       alt="test Name"
+      class="img"
       src="Test Image"
     />
     <figcaption>

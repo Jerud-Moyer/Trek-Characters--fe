@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './CharacterItem.css';
 
 const CharacterItem = ({ name, imageUrl }) => {
   return (
-    <figure>
-      <img src={imageUrl} alt={name} />
+    <figure className={styles.element}>
+      <img src={imageUrl} alt={name} className={styles.img} />
       <figcaption>{name}</figcaption>
     </figure>
   );

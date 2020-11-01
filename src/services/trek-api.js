@@ -7,12 +7,17 @@ export const getCharacters = async() => {
 
   if(!res.ok) throw 'ERROR NOMAD CANNOT COMPUTE!';
 
-  return json.map(character => ({
-    id: character.id,
-    name: character.name,
-    affiliation: character.affiliation,
-    origin: character.origin,
-    race: character.race,
-    imageUrl: character.imageUrl
-  }));
+  return json;
+};
+
+export const addCharacter = (newCharacter) => {
+  console.log(newCharacter);
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newCharacter)
+  })
+    .then(res => res.json());
 };
