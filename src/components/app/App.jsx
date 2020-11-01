@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import CharacterList from '../characters/CharacterList';
 import CreatePage from '../../containers/CreatePage';
+import UpdatePage from '../../containers/UpdatePage';
+import DetailPage from '../../containers/DetailPage';
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={CharacterList} />
           <Route exact path="/create" component={CreatePage} />
+          <Route exect path="/update/:id" component={UpdatePage} />
+          <Route exact path="/detail/:id" component={DetailPage} />
         </Switch>
       </Router>
     </div>
