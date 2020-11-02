@@ -1,7 +1,9 @@
 import React from 'react';
 import { useCharacters } from '../../hooks/characters';
 import CharacterItem from './CharacterItem';
+import Header from '../header/Header';
 import styles from './CharacterList.css';
+import { Link } from 'react-router-dom';
 
 const CharacterList = () => {
   const { loading, characters } = useCharacters();
@@ -9,14 +11,19 @@ const CharacterList = () => {
   
   const charcacterElements = characters.map(character => (
     <li key={character.id}>
-      <CharacterItem {...character} />
+      <Link to={`/detail/${character.id}`} className={styles.link}>
+        <CharacterItem {...character} />
+      </Link>
     </li>
   ));
 
   return (
-    <ul data-testid="characters" className={styles.list}>
-      {charcacterElements}
-    </ul>
+    <div className={styles.homepage}>
+      <Header />
+      <ul data-testid="characters" className={styles.list}>
+        {charcacterElements}
+      </ul>
+    </div>
   );
 
 };

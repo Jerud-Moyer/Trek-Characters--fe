@@ -1,8 +1,24 @@
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: 	#f2c300;
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: 	#0099f6;
   list-style-type: none;
   text-align: center;
+}
+
+.homepage {
+  margin: 0;
+  background-color: #df0000;
+}
+
+.link {
+  font-size: 15px;
+  color: #f2c300;
+  margin: 20px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Update.css';
 
 const Update = ({
   name,
@@ -11,7 +12,7 @@ const Update = ({
   onSubmit
 }) => (
   <>
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={styles.form}>
       <label htmlFor="name">Name</label>
       <input
         id="name"

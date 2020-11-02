@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Update from '../components/characters/Update';
+import Header from '../components/header/Header';
 import {
   deleteCharacter,
   updateCharacter,
   getCharacterById
 } from '../services/trek-api';
 import DeleteCharacter from '../components/characters/DeleteCharacter';
+import styles from './UpdatePage.css';
 
 
 export default class UpdatePage extends Component {
@@ -46,6 +48,7 @@ export default class UpdatePage extends Component {
     const { name, affiliation, origin, race, imageUrl } = this.state;
     const updatedCharacter = { name, affiliation, origin, race, imageUrl };
     await updateCharacter(this.props.match.params.id, updatedCharacter);
+    this.props.history.push('/');
   }
 
   handleClick = async() => {
@@ -59,7 +62,8 @@ export default class UpdatePage extends Component {
   render() {
     const { name, affiliation, origin, race, imageUrl } = this.state;
     return (
-      <div>
+      <div className={styles.UpdatePage}>
+        <Header />
         <Update
           name={name}
           affiliation={affiliation}

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create component renders Character 1`] = `
+<DocumentFragment>
+  <div
+    class="formDiv"
+  >
+    <form
+      class="form"
+    >
+      <label
+        for="name"
+      >
+        Name
+      </label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        value="test Name"
+      />
+      <label
+        for="affiliation"
+      >
+        Affiliation
+      </label>
+      <input
+        id="affiliation"
+        name="affiliation"
+        type="text"
+        value="Saturn"
+      />
+      <label
+        for="origin"
+      >
+        Origin
+      </label>
+      <input
+        id="origin"
+        name="origin"
+        type="text"
+        value="pluto"
+      />
+      <label
+        for="race"
+      >
+        Race
+      </label>
+      <input
+        id="race"
+        name="race"
+        type="text"
+        value="Uranusonian"
+      />
+      <label
+        for="imageUrl"
+      >
+        Image url
+      </label>
+      <input
+        id="imageUrl"
+        name="imageUrl"
+        type="url"
+        value="Test Image"
+      />
+      <button>
+        Submit
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

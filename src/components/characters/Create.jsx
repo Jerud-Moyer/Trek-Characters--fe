@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Create.css';
 
 const Create = ({
   name,
@@ -10,8 +11,8 @@ const Create = ({
   onChange,
   onSubmit
 }) => (
-  <>
-    <form onSubmit={onSubmit}>
+  <div className={styles.formDiv}>
+    <form onSubmit={onSubmit} className={styles.form}>
       <label htmlFor="name">Name</label>
       <input
         id="name"
@@ -44,7 +45,7 @@ const Create = ({
         value={race}
         onChange={onChange}
       />
-      <label htmlFor="imageUrl">Image</label>
+      <label htmlFor="imageUrl">Image url</label>
       <input
         id="imageUrl"
         type="url"
@@ -55,7 +56,7 @@ const Create = ({
       <button>Submit</button>
     </form>
 
-  </>
+  </div>
 );
 
 Create.propTypes = {

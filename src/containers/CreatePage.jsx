@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import Create from '../components/characters/Create';
 import { addCharacter } from '../services/trek-api';
+import Header from '../components/header/Header';
+import PropTypes from 'prop-types';
 
 export default class CreatePage extends Component {
   state = {
+    id: '',
     name: '',
     affiliation: '',
     origin: '',
     race: '',
     imageUrl: '',
     newCharacter: {}
+  }
+
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
   }
 
   handleChange = ({ target }) => {
@@ -22,11 +30,13 @@ export default class CreatePage extends Component {
     const newCharacter = { name, affiliation, origin, race, imageUrl };
     this.setState({ newCharacter });
     addCharacter(newCharacter);
+    this.props.history.push('/');
   }
   render() {
     const { name, affiliation, origin, race, imageUrl } = this.state;
     return (
       <div>
+        <Header />
         <Create
           name={name}
           affiliation={affiliation}

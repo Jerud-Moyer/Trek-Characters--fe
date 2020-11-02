@@ -1,0 +1,29 @@
+
+.headline {
+  @font-face {
+    font-family: Stardate81316;
+    src:("../../assets/Stardate81316-aolE.ttf") format("truetype");
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  padding: 0;
+  background-color: #0099f6;
+  color: #f2c300;
+  min-height: 100%;
+  
+}
+
+.header {
+  min-height: 100%;
+  background-color: #df0000;
+}
+
+.link {
+  font-size: 20px;
+  color: #f2c300;
+  margin: 20px;
+  height: 30px;
+}

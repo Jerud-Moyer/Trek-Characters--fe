@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Update component renders Character 1`] = `
+<DocumentFragment>
+  <form
+    class="form"
+  >
+    <label
+      for="name"
+    >
+      Name
+    </label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      value="test Name"
+    />
+    <label
+      for="affiliation"
+    >
+      Affiliation
+    </label>
+    <input
+      id="affiliation"
+      name="affiliation"
+      type="text"
+      value="Milky way defense force"
+    />
+    <label
+      for="origin"
+    >
+      Origin
+    </label>
+    <input
+      id="origin"
+      name="origin"
+      type="text"
+      value="Mars"
+    />
+    <label
+      for="race"
+    >
+      Race
+    </label>
+    <input
+      id="race"
+      name="race"
+      type="text"
+      value="Martian"
+    />
+    <label
+      for="imageUrl"
+    >
+      Image
+    </label>
+    <input
+      id="imageUrl"
+      name="imageUrl"
+      type="url"
+      value="Test Image"
+    />
+    <button>
+      Update
+    </button>
+  </form>
+</DocumentFragment>
+`;

@@ -10,7 +10,9 @@ exports[`CharacterItem component renders Character 1`] = `
       class="img"
       src="Test Image"
     />
-    <figcaption>
+    <figcaption
+      class="name"
+    >
       test Name
     </figcaption>
   </figure>
