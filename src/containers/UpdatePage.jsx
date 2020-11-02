@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Update from '../components/characters/Update';
-import { updateCharacter, getCharacterById } from '../services/trek-api';
+import {
+  deleteCharacter,
+  updateCharacter,
+  getCharacterById
+} from '../services/trek-api';
+import DeleteCharacter from '../components/characters/DeleteCharacter';
+
 
 export default class UpdatePage extends Component {
   state = {
@@ -14,7 +20,8 @@ export default class UpdatePage extends Component {
   }
 
   static propTypes = {
-    match: PropTypes.object.isRequired
+    match: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
   }
 
   componentDidMount = async() => {
@@ -36,12 +43,19 @@ export default class UpdatePage extends Component {
 
   handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(this.props.match.params.id);
     const { name, affiliation, origin, race, imageUrl } = this.state;
     const updatedCharacter = { name, affiliation, origin, race, imageUrl };
-    // this.setState(updatedCharacter);
     await updateCharacter(this.props.match.params.id, updatedCharacter);
   }
+
+  handleClick = async() => {
+    if(window.confirm('Are you sure you wish to delete this entry?')) {
+      await deleteCharacter(this.props.match.params.id);
+      this.props.history.push('/');
+    }
+    this.props.history.push('/');
+  }
+
   render() {
     const { name, affiliation, origin, race, imageUrl } = this.state;
     return (
@@ -55,6 +69,7 @@ export default class UpdatePage extends Component {
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}
         />
+        <DeleteCharacter onClick={this.handleClick} />
       </div>
     );
   }

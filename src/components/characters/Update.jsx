@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Create = ({
+const Update = ({
   name,
   affiliation,
   origin,
@@ -59,7 +59,7 @@ const Create = ({
   </>
 );
 
-Create.propTypes = {
+Update.propTypes = {
   name: PropTypes.string.isRequired,
   affiliation: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
@@ -69,4 +69,4 @@ Create.propTypes = {
   onSubmit: PropTypes.func.isRequired
 };
 
-export default Create;
+export default Update;

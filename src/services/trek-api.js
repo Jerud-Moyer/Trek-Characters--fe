@@ -47,3 +47,13 @@ export const updateCharacter = (id, character) => {
     body: JSON.stringify(character)
   });
 };
+
+export const deleteCharacter = (id) => {
+  fetch(`${url}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(res => res.json());
+};
