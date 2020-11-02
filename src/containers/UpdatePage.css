@@ -1,4 +1,13 @@
 .UpdatePage {
-  min-height: 100vh;
+
   background-color: #0099f6;
+}
+
+.header {
+  position: fixed;
+}
+
+.form {
+  max-height: 90vh;
+  overflow: scroll;
 }

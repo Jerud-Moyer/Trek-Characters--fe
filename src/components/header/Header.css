@@ -1,10 +1,6 @@
 
-.headline {
-  @font-face {
-    font-family: Stardate81316;
-    src:("../../assets/Stardate81316-aolE.ttf") format("truetype");
-  }
 
+.headline {
   display: flex;
   justify-content: center;
   align-items: center;

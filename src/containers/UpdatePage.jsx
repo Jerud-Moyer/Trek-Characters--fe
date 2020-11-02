@@ -63,17 +63,19 @@ export default class UpdatePage extends Component {
     const { name, affiliation, origin, race, imageUrl } = this.state;
     return (
       <div className={styles.UpdatePage}>
-        <Header />
-        <Update
-          name={name}
-          affiliation={affiliation}
-          origin={origin}
-          race={race}
-          imageUrl={imageUrl}
-          onChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-        />
-        <DeleteCharacter onClick={this.handleClick} />
+        <Header className={styles.header}/>
+        <div className={styles.form}>
+          <Update
+            name={name}
+            affiliation={affiliation}
+            origin={origin}
+            race={race}
+            imageUrl={imageUrl}
+            onChange={this.handleChange}
+            onSubmit={this.handleSubmit}
+          />
+          <DeleteCharacter onClick={this.handleClick} />
+        </div>
       </div>
     );
   }

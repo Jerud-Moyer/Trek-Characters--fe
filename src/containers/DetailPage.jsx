@@ -37,7 +37,7 @@ export default class Detail extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header className={styles.header}/>
         <div data-testid="detail" className={styles.Detail}>
           <h1 className="char-name">{this.state.name}</h1>
           <h1>Affiliation: {this.state.affiliation}</h1>

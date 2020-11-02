@@ -19,7 +19,7 @@ const CharacterList = () => {
 
   return (
     <div className={styles.homepage}>
-      <Header />
+      <Header className={styles.header}/>
       <ul data-testid="characters" className={styles.list}>
         {charcacterElements}
       </ul>

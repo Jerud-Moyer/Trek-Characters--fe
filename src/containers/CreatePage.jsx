@@ -3,6 +3,7 @@ import Create from '../components/characters/Create';
 import { addCharacter } from '../services/trek-api';
 import Header from '../components/header/Header';
 import PropTypes from 'prop-types';
+import styles from './CreatePage.css';
 
 export default class CreatePage extends Component {
   state = {
@@ -36,16 +37,18 @@ export default class CreatePage extends Component {
     const { name, affiliation, origin, race, imageUrl } = this.state;
     return (
       <div>
-        <Header />
-        <Create
-          name={name}
-          affiliation={affiliation}
-          origin={origin}
-          race={race}
-          imageUrl={imageUrl}
-          onChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-        />
+        <Header className={styles.header}/>
+        <div className={styles.form}>
+          <Create
+            name={name}
+            affiliation={affiliation}
+            origin={origin}
+            race={race}
+            imageUrl={imageUrl}
+            onChange={this.handleChange}
+            onSubmit={this.handleSubmit}
+          />
+        </div>
       </div>
     );
   }
