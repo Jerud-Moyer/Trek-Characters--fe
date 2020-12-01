@@ -1,0 +1,11 @@
+.Delete {
+
+  button {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    width: 100px;
+    height: 30px;
+    color: #df0000;
+    background-color: #f2c300;
+  }
+}

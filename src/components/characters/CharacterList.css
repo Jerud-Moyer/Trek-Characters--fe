@@ -1,0 +1,30 @@
+
+.list {
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-height: 90vh;
+  overflow: scroll;
+  background-color: 	#0099f6;
+  list-style-type: none;
+  text-align: center;
+}
+
+.homepage {
+  margin: 0;
+  background-color: #df0000;
+}
+
+.link {
+  font-size: 15px;
+  color: #f2c300;
+  margin: 20px;
+}
+
+.header {
+  position: fixed;
+}
