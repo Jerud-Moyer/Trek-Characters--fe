@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 const CharacterList = () => {
   const { loading, characters } = useCharacters();
+  
   if(loading) return <h1>Nomad Loading!</h1>;
   
   const charcacterElements = characters.map(character => (

@@ -6,7 +6,7 @@ import {
   deleteCharacter,
   updateCharacter,
   getCharacterById
-} from '../services/trek-api';
+} from '../services/trekdex-api';
 import DeleteCharacter from '../components/characters/DeleteCharacter';
 import styles from './UpdatePage.css';
 

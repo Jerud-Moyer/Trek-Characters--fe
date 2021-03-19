@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getCharacterById } from '../services/trek-api';
+import { getCharacterById } from '../services/trekdex-api';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Header from '../components/header/Header';

@@ -79,12 +79,28 @@ module.exports = {
         ]
       },
       {
+        test: /\.ttf$/,
+        use: [
+          {
+            loader: 'ttf-loader',
+            options: {
+              name: './font/[hash].[ext]',
+            },
+          },
+        ]
+      },
+      {
         test: /\.(jpeg|jpg|png|svg)$/,
         use: {
           loader: 'url-loader',
           options: { limit: 1000 },
         },
-      }
+        
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ]
   }
 };

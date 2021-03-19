@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Create from '../components/characters/Create';
-import { addCharacter } from '../services/trek-api';
+import { addCharacter } from '../services/trekdex-api';
 import Header from '../components/header/Header';
 import PropTypes from 'prop-types';
 import styles from './CreatePage.css';

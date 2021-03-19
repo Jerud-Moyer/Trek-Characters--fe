@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { addCharacter, getCharacters } from '../services/trek-api';
+import { addCharacter } from '../services/trek-api';
+import { getCharacters } from '../services/trekdex-api';
+
 
 export const useCharacters = () => {
   const [loading, setLoading] = useState(true);
@@ -9,7 +11,6 @@ export const useCharacters = () => {
   useEffect(() => {
     getCharacters()
       .then(fetchedCharacters => setCharacters(fetchedCharacters))
-      .then(console.log)
       .finally(() => setLoading(false));
   }, []);
 

@@ -1,16 +1,25 @@
-const url = process.env.API_URL;
+const url: string = process.env.API_URL as string;
+
+interface Character {
+  id: number;
+  name: string;
+  affiliation: string;
+  origin: string;
+  race: string;
+  imageUrl: string;
+}
 
 
-export const getCharacters = async() => {
+export const getCharacters = async(): Promise<void> => {
   const res = await fetch(url);
   const json = await res.json();
-  console.log(url);
+
   if(!res.ok) throw 'ERROR NOMAD CANNOT COMPUTE!';
 
   return json;
 };
 
-export const getCharacterById = async(id) => {
+export const getCharacterById = async(id: number): Promise<Character> => {
   const res = await fetch(`${url}/${id}`);
   const json = await res.json();
 
@@ -26,7 +35,7 @@ export const getCharacterById = async(id) => {
   };
 };
 
-export const addCharacter = (newCharacter) => {
+export const addCharacter = (newCharacter: Object): void => {
   fetch(url, {
     method: 'POST',
     headers: {
@@ -37,7 +46,7 @@ export const addCharacter = (newCharacter) => {
     .then(res => res.json());
 };
 
-export const updateCharacter = (id, character) => {
+export const updateCharacter = (id: number, character: Character): void => {
   fetch(`${url}/${id}`, {
     method: 'PUT',
     headers: {
@@ -47,7 +56,7 @@ export const updateCharacter = (id, character) => {
   });
 };
 
-export const deleteCharacter = (id) => {
+export const deleteCharacter = (id: number): void => {
   fetch(`${url}/${id}`, {
     method: 'DELETE',
     headers: {

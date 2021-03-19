@@ -1,6 +1,20 @@
 
+  
+
+ @font-face {
+  font-family: 'minstrelposterwhgregular';
+  src: url('/public/assets/MINSPSW_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+ }
+
+ @font-face {
+   font-family: 'Startrekenterprisefutureitalic';
+   src: url('/public/assets/StartrekenterprisefutureItalic-a4KK.ttf') format('truetype');
+ }
 
 .headline {
+  font-family: 'Startrekenterprisefutureitalic';
   display: flex;
   justify-content: center;
   align-items: center;
